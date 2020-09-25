@@ -1,0 +1,14 @@
+<h1>I work</h1>
+
+{% if registered %}
+<h1>Thank you for regitering</h1>
+<h1>Here is the login page</h1>
+<h1><a href="{% url 'mangoapp:login' %}">Login</a></h1>
+{% else %}
+<form class="" action="{% url 'mangoapp:registration'%}" method="post">
+  {% csrf_token %}
+  {{uf}}
+  {{ux}}
+  <input type="submit" name="" value="Submit">
+</form>
+{% endif %}

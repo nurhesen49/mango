@@ -1,0 +1,9 @@
+<h1>I am working</h1>
+{% if user.is_authenticated %}
+<h1>i am authenticated</h1>
+<h3><a href="{% url 'mangoapp:logout' %}">Logout</a></h3>
+{% else %}
+<h3><a href="{% url 'mangoapp:login' %}">Login</a></h3>
+
+<h1>i am not authenticated</h1>
+{% endif %}
